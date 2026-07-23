@@ -1,6 +1,9 @@
-apply(plugin = "com.android.application")
-apply(plugin = "kotlin-android")
-apply(plugin = "com.lagradost.cloudstream3.plugins")
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+}
+
+apply plugin: 'com.lagradost.cloudstream3.plugins'
 
 cloudstream {
     setRepoName("My JSON Extension")
@@ -9,14 +12,15 @@ cloudstream {
 }
 
 android {
-    namespace = "com.example.myapplication"
-    compileSdk = 33
+    namespace 'com.example.myapplication'
+    compileSdk 33
+
     defaultConfig {
-        minSdk = 21
-        targetSdk = 33
+        minSdk 21
+        targetSdk 33
     }
 }
 
 dependencies {
-    implementation("com.github.recloudstream:cloudstream:-SNAPSHOT")
+    implementation 'com.github.recloudstream:cloudstream:-SNAPSHOT'
 }
