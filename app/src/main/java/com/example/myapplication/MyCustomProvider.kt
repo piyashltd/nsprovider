@@ -11,7 +11,7 @@ class MyCustomProvider : MainAPI() {
     override val supportedTypes = setOf(TvType.Movie, TvType.TvSeries)
     
     // আপনার JSON ফাইলের ডিরেক্ট লিংকটি এখানে বসান
-    override var mainUrl = "https://raw.githubusercontent.com/piyashltd/repo/main/data.json"
+    override var mainUrl = "https://raw.githubusercontent.com/piyashltd/nsprovider/refs/heads/main/data.json"
 
     private suspend fun getConfig(): CustomConfig? {
         val response = app.get(mainUrl).text
