@@ -1,7 +1,7 @@
 plugins {
     id("com.android.application")
     id("kotlin-android")
-    id("com.lagradost.cloudstream3.plugins")
+    id("com.lagradost.cloudstream3.plugins") version "1.0.4" // এই অংশটুকু যোগ করতে হবে
 }
 
 cloudstream {
