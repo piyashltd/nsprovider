@@ -1,15 +1,13 @@
 plugins {
     id("com.android.application")
     kotlin("android")
+    id("com.lagradost.cloudstream3.plugins") 
 }
 
-// এই লাইনের মাধ্যমে রুট ফাইল থেকে প্লাগিনটি অ্যাপ্লাই হবে
-apply(plugin = "com.lagradost.cloudstream3.plugins")
-
 cloudstream {
-    setRepoName("My JSON Extension")
-    setRepoDescription("Custom API based Cloudstream Extension")
-    setRepoAuthor("You")
+    repoName = "My JSON Extension"
+    repoDescription = "Custom API based Cloudstream Extension"
+    repoAuthor = "You"
 }
 
 android {
