@@ -1,13 +1,18 @@
 plugins {
     id("com.android.application")
     kotlin("android")
-    id("com.lagradost.cloudstream3.plugins")
 }
 
-cloudstream {
-    repoName = "My JSON Extension"
-    repoDescription = "Custom API based Cloudstream Extension"
-    repoAuthor = "You"
+// প্লাগিনটি সফলভাবে অ্যাপ্লাই হলো
+apply(plugin = "com.lagradost.cloudstream3.plugins")
+
+// Kotlin DSL-এর Type-Safe এরর বাইপাস করার জন্য Groovy Builder ব্যবহার
+extensions.configure("cloudstream") {
+    withGroovyBuilder {
+        setProperty("repoName", "My JSON Extension")
+        setProperty("repoDescription", "Custom API based Cloudstream Extension")
+        setProperty("repoAuthor", "You")
+    }
 }
 
 android {
@@ -21,6 +26,5 @@ android {
 }
 
 dependencies {
-    // এখানেও master-SNAPSHOT ব্যবহার করা হয়েছে
     implementation("com.github.recloudstream:cloudstream:master-SNAPSHOT")
 }
