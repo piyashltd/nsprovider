@@ -1,9 +1,9 @@
 plugins {
     id("com.android.application")
-    kotlin("android") // id("kotlin-android") এর পরিবর্তে এটি ব্যবহার করা ভালো
+    kotlin("android")
 }
 
-// রুট ফাইলের buildscript থেকে প্লাগিনটি অ্যাপ্লাই করার জন্য
+// এই লাইনের মাধ্যমে রুট ফাইল থেকে প্লাগিনটি অ্যাপ্লাই হবে
 apply(plugin = "com.lagradost.cloudstream3.plugins")
 
 cloudstream {
