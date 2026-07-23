@@ -1,8 +1,10 @@
 plugins {
     id("com.android.application")
-    id("kotlin-android")
-    id("com.lagradost.cloudstream3.plugins") version "1.0.4" // এই অংশটুকু যোগ করতে হবে
+    kotlin("android") // id("kotlin-android") এর পরিবর্তে এটি ব্যবহার করা ভালো
 }
+
+// রুট ফাইলের buildscript থেকে প্লাগিনটি অ্যাপ্লাই করার জন্য
+apply(plugin = "com.lagradost.cloudstream3.plugins")
 
 cloudstream {
     setRepoName("My JSON Extension")
