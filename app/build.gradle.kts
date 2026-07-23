@@ -1,8 +1,6 @@
-plugins {
-    id("com.android.application")
-    id("kotlin-android")
-    id("com.lagradost.cloudstream3.plugins") // এখান থেকে version "1.0.0" অংশটি বাদ দেওয়া হয়েছে
-}
+apply(plugin = "com.android.application")
+apply(plugin = "kotlin-android")
+apply(plugin = "com.lagradost.cloudstream3.plugins")
 
 cloudstream {
     setRepoName("My JSON Extension")
